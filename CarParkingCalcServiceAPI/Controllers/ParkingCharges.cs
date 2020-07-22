@@ -20,11 +20,11 @@ namespace CarParkingCalcServiceAPI.Controllers
         [HttpGet]
         public IEnumerable<ParkingCharges> GetParkingCharge(DateTime CarEntryTime ,DateTime CarExistTime)
         {
-            var calculator = new ParkingChargeCalculator();
-            var charge = calculator.CaclulateParkingCharges(CarEntryTime, CarExistTime);           
-            List<ParkingCharges> lst = new List<ParkingCharges>();
+             var calculator = new ParkingChargeCalculator();
+            Model.ParkingCharges charge = calculator.CaclulateParkingCharges(CarEntryTime, CarExistTime);           
+            List<Model.ParkingCharges> lst = new List<Model.ParkingCharges>();
+            lst.Add(charge);
             return lst;
-            //return View();
         }
 
     }
