@@ -51,10 +51,9 @@ namespace CarParkingCalcServiceAPI.Data
         public static NameoftheRate GetNameOfRate(DateTime CarEntryTime, DateTime CarExistTime)
         {
             //  #Rule weekedn
-                if ((CarEntryTime.Day ==6  || CarEntryTime.Day == 7) &&
-              (CarExistTime.Day == 6 || CarExistTime.Day == 7))
+               if ((CarEntryTime.DayOfWeek ==DayOfWeek.Sunday  || CarEntryTime.DayOfWeek == DayOfWeek.Saturday) &&
+              (CarExistTime.DayOfWeek == DayOfWeek.Sunday  || CarExistTime.DayOfWeek == DayOfWeek.Saturday ))
                 return NameoftheRate.Weekend;
-           
             //  #Rule early bird
 
             if (CarEntryTime.TimeOfDay.Hours >= 6 && CarEntryTime.TimeOfDay.Hours <= 10 &&
