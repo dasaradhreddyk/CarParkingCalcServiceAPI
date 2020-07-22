@@ -33,7 +33,7 @@ namespace CarParkingCalcServiceAPI.Data
 
             }
             ParkingCharges TotalchargeObj = new ParkingCharges();
-            TotalchargeObj.ParkingRate = 10;
+            TotalchargeObj.ParkingRate = ParkingRate;
             TotalchargeObj.TotalCcharges = charge;
             TotalchargeObj.CarParkingStartTime = CarEntryTime;
             TotalchargeObj.CarParkingEndTime = CarExistTime;
