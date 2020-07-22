@@ -26,8 +26,11 @@ namespace CarParkingCalcServiceAPI.Controllers.Tests
             //Rule night
             charge = ctr.GetParkingCharge(DateTime.Now.AddHours(-9), DateTime.Now.AddHours(2));
 
-            //Rule standard
-            ctr.GetParkingCharge(DateTime.Now.AddHours(-9), DateTime.Now.AddHours(2));
+              //Rule standard
+            //https://localhost:44336/ParkingCharges?CarEntryTime=2020-07-01T09:00:00&CarExistTime=2020-07-01T12:00:00
+
+            ctr.GetParkingCharge( DateTime.Parse("2020-07-01T09:00:00"), DateTime.Parse("2020-07-01T12:00:00"));
+
 
             //Exception Testing. 
             charge = ctr.GetParkingCharge(DateTime.Now.AddHours(-9),DateTime.Now.AddHours(2));
