@@ -8,6 +8,8 @@ Tests:
 
         Test API work space has tests for all type of charge types
         
+PS: MULTI day parking not consdered in calculation, algorithem can be extended to calculate if No hours > 24 it is rate of 20$ per day.
+        
 Name of the Rate	Early Bird
 Type	Flat Rate
 Total Price	$13.00
